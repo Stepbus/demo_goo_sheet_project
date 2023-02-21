@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+    pgadmin:
+      container_name: pgadmin
+      image: dpage/pgadmin4
+      restart: always
+      environment:
+        - PGADMIN_DEFAULT_EMAIL=${PGADMIN_MAIL}
+        - PGADMIN_DEFAULT_PASSWORD=${PGADMIN_PSW}
+      ports:
+        - "5050:80"
